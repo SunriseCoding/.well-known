@@ -2,6 +2,7 @@ function createConfetti() {
   const confetti = document.createElement("div");
   confetti.classList.add("confetti");
   confetti.style.left = Math.random() * window.innerWidth + "px";
+  confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 60%)`;
   document.body.appendChild(confetti);
 
   setTimeout(() => {
@@ -19,7 +20,6 @@ style.textContent = `
     top: -10px;
     width: 10px;
     height: 10px;
-    background: hsl(${Math.random() * 360}, 70%, 60%);
     animation: fall 3s linear forwards;
   }
   @keyframes fall {
